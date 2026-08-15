@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public record Transaction(
+        Long id,
         BigDecimal amount,
         TransactionType type,
         String category,

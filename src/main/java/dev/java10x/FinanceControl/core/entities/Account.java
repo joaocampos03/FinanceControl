@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public record Account(
+        Long id,
         String name,
         AccountType type,
         String institution,
