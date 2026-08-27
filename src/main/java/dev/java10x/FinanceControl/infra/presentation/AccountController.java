@@ -21,4 +21,9 @@ public class AccountController {
         return accountDtoMapper.toDto(newAccount);
     }
 
+    @GetMapping
+    public String listarContas() {
+        return "lista de contas";
+    }
+
 }

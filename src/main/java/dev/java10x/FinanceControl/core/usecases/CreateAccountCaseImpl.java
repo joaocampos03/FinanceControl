@@ -13,6 +13,6 @@ public class CreateAccountCaseImpl implements CreateAccountCase {
 
     @Override
     public Account execute(Account account) {
-        return null;
+        return accountGateway.createAccount(account);
     }
 }
