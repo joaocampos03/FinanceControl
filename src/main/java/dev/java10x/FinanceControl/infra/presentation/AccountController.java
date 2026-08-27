@@ -4,19 +4,16 @@ import dev.java10x.FinanceControl.core.entities.Account;
 import dev.java10x.FinanceControl.core.usecases.CreateAccountCase;
 import dev.java10x.FinanceControl.infra.dtos.AccountDto;
 import dev.java10x.FinanceControl.infra.mapper.AccountDtoMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("api/v1/")
 public class AccountController {
 
     private final CreateAccountCase createAccountCase;
     private final AccountDtoMapper accountDtoMapper;
-
-    public AccountController(CreateAccountCase createAccountCase, AccountDtoMapper accountDtoMapper) {
-        this.createAccountCase = createAccountCase;
-        this.accountDtoMapper = accountDtoMapper;
-    }
 
     @PostMapping("criarconta")
     public AccountDto criarConta(@RequestBody AccountDto accountDto) {
